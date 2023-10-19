@@ -8,11 +8,8 @@ const Domselectors = {
 let boxCount = 0
 let doCount = 0
 const hexTest = /^#([0-9A-Fa-f]{3}){1,2}$/;
+Domselectors.entered.value = '#';
 
-
-Domselectors.button.addEventListener("click", function(){
-    Domselectors.entered.value = '#';
-})
 Domselectors.button.addEventListener("click", function () {
     
     if (boxCount <= 7 && hexTest.test(Domselectors.entered.value)) {
@@ -20,7 +17,7 @@ Domselectors.button.addEventListener("click", function () {
         const newBox = document.createElement("div");
         newBox.style.backgroundColor = Domselectors.entered.value
         newBox.classList.add("box");
-       
+        Domselectors.entered.value = '#';
 
 
         newBox.addEventListener("click", function () {
@@ -58,3 +55,5 @@ Domselectors.button.addEventListener("click", function(){
     }
     
 })
+
+
