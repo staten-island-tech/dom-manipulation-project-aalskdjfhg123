@@ -2,7 +2,8 @@ const Domselectors = {
     button: document.querySelector("#button"),
     container: document.querySelector(".container"),
     form: document.getElementById("form"),
-    entered: document.getElementById("entered")
+    entered: document.getElementById("entered"),
+    deleteButton: document.getElementById("delete")
 }//dom
 
 Domselectors.entered.value = '#';
@@ -17,8 +18,10 @@ clicked the button */
 const hexTest = /^#([0-9A-Fa-f]{3}){1,2}$/;
 //checks to see if inputed hex code is valid
 
+
+
 Domselectors.button.addEventListener("click", function () {
-    
+
     if (boxCount <= 7 && hexTest.test(Domselectors.entered.value))//checks if there are too many boxes or if there is an invalid hex code 
     {
 
@@ -63,13 +66,22 @@ Domselectors.button.addEventListener("click", function () {
 },
 );
 
-Domselectors.button.addEventListener("click", function(){
-    if (doCount < 1){
+Domselectors.button.addEventListener("click", function () {
+    if (doCount < 1) {
         alert("click on boxes you dont like")
         doCount++
         //tells user how to delete boxes
     }
-    
+
 })
 
-
+Domselectors.deleteButton.addEventListener("click", function () {
+    if (boxCount > 0) {
+        while (Domselectors.container.firstChild) {
+            Domselectors.container.removeChild(Domselectors.container.firstChild, boxCount--);
+        }
+    }
+    else {
+        alert("bro theres no boxes")
+    }
+})
