@@ -46,7 +46,7 @@ Domselectors.button.addEventListener("click", function () {
         //adds box to the page
 
     } else if (boxCount >= 8) {
-        alert("chill out bro too many boxes");//checks if too many boxes
+        alert("chill out buddy too many boxes");//checks if too many boxes
     }
     else //checks if invalid hex
     {
@@ -78,10 +78,10 @@ Domselectors.button.addEventListener("click", function () {
 Domselectors.deleteButton.addEventListener("click", function () {
     if (boxCount > 0) {
         while (Domselectors.container.firstChild) {
-            Domselectors.container.removeChild(Domselectors.container.firstChild, boxCount--);
-        }
+            Domselectors.container.removeChild(Domselectors.container.firstChild, boxCount=0);
+        }//deletes all boxes
     }
     else {
         alert("bro theres no boxes")
-    }
+    }//checks if there are any boxes to delete
 })
