@@ -3,7 +3,8 @@ const Domselectors = {
     container: document.querySelector(".container"),
     form: document.getElementById("form"),
     entered: document.getElementById("entered"),
-    deleteButton: document.getElementById("delete")
+    deleteButton: document.getElementById("delete"),
+    sampleButton: document.getElementById("sample")
 }//dom
 
 Domselectors.entered.value = '#';
@@ -78,10 +79,28 @@ Domselectors.button.addEventListener("click", function () {
 Domselectors.deleteButton.addEventListener("click", function () {
     if (boxCount > 0) {
         while (Domselectors.container.firstChild) {
-            Domselectors.container.removeChild(Domselectors.container.firstChild, boxCount=0);
+            Domselectors.container.removeChild(Domselectors.container.firstChild, boxCount = 0);
         }//deletes all boxes
     }
     else {
         alert("bro theres no boxes")
     }//checks if there are any boxes to delete
 })
+
+
+Domselectors.sampleButton.addEventListener("click", function () {
+
+    let number = Math.floor(Math.random() * (5) + 1)
+    console.log(number)
+    if (number == 1) {
+        Domselectors.entered.value = "#D65858"
+    } else if (number == 2) {
+        Domselectors.entered.value = "#58D671"
+    } else if (number == 3) {
+        Domselectors.entered.value = "#FFFB00"
+    } else if (number == 4) {
+        Domselectors.entered.value = "#D058D6"
+    } else {
+        Domselectors.entered.value = "#58CDD6"
+    }
+}) //theres definately a better way to do this that i haven't figured out yet
