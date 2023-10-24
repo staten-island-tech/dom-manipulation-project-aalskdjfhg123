@@ -2,19 +2,52 @@ html,
 body,
 * {
     font-size: 25px;
-    background-color: lightgrey;
+    background: #e7ebee;
+    font-weight: 600;
+    color: #3a4149;
+
 }
 
-.form{
+#entered {
+
+    border: solid black;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 15%;
+    position: relative;
+    border-radius: 3px;
+    padding: 9px 12px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    transition: all .2s ease;
+}
+
+#entered:hover {
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
+
+#entered:focus {
+    background: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 3px;
+}
+
+
+
+.form {
     text-align: center;
 }
-.sub{
+
+.sub {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 15px;
 }
 
-h1{
+h1 {
     font-size: 2rem;
     text-align: center;
 }
@@ -50,6 +83,7 @@ h1{
     font-size: 10px;
     margin-top: -10px;
     margin-bottom: 1rem;
+
 }
 
 .container {
@@ -68,11 +102,102 @@ h1{
     margin-top: 35px;
 }
 
-#button{
+#button {
     margin-right: 1rem;
 }
 
-.buttons{
+.buttons {
     margin-top: 1rem;
-    
+
+}
+
+
+#button {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 12px 24px;
+    line-height: 1.15;
+    font-size: 16px;
+    border: solid black;
+}
+
+#button:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    background-color: #fff;
+
+}
+
+#delete {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    line-height: 1.15;
+    font-size: 16px;
+    border: solid black;
+}
+
+#delete:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    background-color: #fff;
+
+}
+
+#sample {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    line-height: 1.15;
+    font-size: 16px;
+    border: solid black;
+}
+
+#sample:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    background-color: #fff;
+
+}
+
+#rbgSample {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    line-height: 1.15;
+    font-size: 16px;
+    border: solid black;
+}
+
+#rbgSample:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+.or {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+#red {
+    width: 4.5rem;
+}
+
+#green {
+    width: 4.5rem;
+}
+
+#blue {
+    width: 4.5rem;
 }
